@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>회원가입</h2>
+	<form method="post" action="TestBean.jsp">
+		<table border="1">
+			<tr>
+				<td></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

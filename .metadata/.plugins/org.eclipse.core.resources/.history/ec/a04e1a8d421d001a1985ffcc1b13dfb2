@@ -1,0 +1,9 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" import="mybean.TestBean"%>
+<%
+request.setCharacterEncoding("UTF-8");
+%>
+
+<jsp:useBean id="tb" class="mybean.TestBean">
+	<jsp:setProperty name="">
+</jsp:useBean>

@@ -1,0 +1,18 @@
+package mail;
+
+import java.io.*;
+import com.oreilly.servlet.*;
+
+public class MailSender {
+	
+	//필드=전역변수=property=속성
+	private String from, to, subject, content;
+	
+	// 생성자
+	public MailSender(){
+		from = "";
+		to = "";
+		subject = "";
+		content = "";
+	}
+}

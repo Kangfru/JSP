@@ -1,0 +1,10 @@
+package mail;
+
+import java.io.*;
+import com.oreilly.servlet.*;
+
+public class MailSender {
+
+	private String from, to, subject, content;
+	
+}

@@ -1,0 +1,17 @@
+package boardmysql;
+
+import java.util.Date;
+
+
+public class BoardDTO {
+	private int num;
+	private String writer;
+	private String email;
+	private String subject;
+	private String passwd;
+	private Date reg_date;
+	private int readCount;
+	private int ref; // ±Û ±×·ì
+	private int re_step;
+	private int re_level;
+}

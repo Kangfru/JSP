@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>includeTag.html</title>
+</head>
+<body>
+	<form method="post" action="includeTag.jsp">
+	
+	</form>
+</body>
+</html>

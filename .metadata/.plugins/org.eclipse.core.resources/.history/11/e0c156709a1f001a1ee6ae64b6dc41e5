@@ -1,0 +1,21 @@
+package emailupload;
+
+import java.io.*;
+import javax.servlet.http.*;
+
+import com.oreilly.servlet.*;
+import com.oreilly.servlet.multipart.*;
+
+public class EmailUpload {
+	
+	public String upload(HttpServletRequest request){
+		String reply = "";
+		try {
+			
+		} catch (Exception e){
+			e.printStackTrace();
+		}
+		
+		return null;
+	}
+}

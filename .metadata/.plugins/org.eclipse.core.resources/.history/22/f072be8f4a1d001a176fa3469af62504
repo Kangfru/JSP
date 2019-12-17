@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>fileupload.html</title>
+</head>
+<body>
+<form method="post" action="fileupload.jsp" encType="multipart/form-data">
+
+</form>
+</body>
+</html>

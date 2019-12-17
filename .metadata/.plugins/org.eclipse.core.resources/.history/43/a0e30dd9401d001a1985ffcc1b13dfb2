@@ -1,0 +1,5 @@
+package mybean;
+
+public class TestBean {
+	private String id, pwd, name, addr, email, tel;
+}

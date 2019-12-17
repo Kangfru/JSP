@@ -1,0 +1,19 @@
+package boardmysql;
+
+import java.util.Date;
+
+
+public class BoardDTO {
+	private int num;
+	private String writer;
+	private String email;
+	private String subject;
+	private String passwd;
+	private Date reg_date;
+	private int readCount;
+	private int ref; // 글 그룹
+	private int re_step; // 원글 답글 순서
+	private int re_level; // 답글 들여쓰기
+	private String content;
+	private String ip;
+}

@@ -1,0 +1,35 @@
+package emailupload;
+
+import java.io.*;
+import javax.servlet.http.*;
+
+import com.oreilly.servlet.*;
+import com.oreilly.servlet.multipart.*;
+
+public class EmailUpload {
+	
+	public String upload(HttpServletRequest request){
+		String reply = "";
+		try {
+			MultipartRequest multi = new MultipartRequest(request, "c:\\_jsp\\upload\\");
+			
+			String from = multi.getParameter("from");
+			String to = multi.getParameter("to");
+			String subject = multi.getParameter("subject");
+			String content = multi.getParameter("content");
+			
+			MailMessage msg = new MailMessage("smpt.nate.com");
+			msg.from(from);
+			msg.to(to);
+			msg.setSubject(subject);
+			
+			// MailMessage 에서 출력용 스트링 생성
+			
+		} catch (Exception e){
+			reply = "메일보내기, 파일업로드 실패";
+			e.printStackTrace();
+		}
+		
+		return reply;
+	}
+}

@@ -1,0 +1,16 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" import="mybean.TestBean"%>
+<%
+request.setCharacterEncoding("UTF-8");
+%>
+
+<jsp:useBean id="tb" class="mybean.TestBean">
+	<jsp:setProperty name="tb" property="*"/>
+</jsp:useBean>
+
+ID:<jsp:getProperty name="tb" property="id"/><br>
+ID:<jsp:getProperty name="tb" property="pwd"/><br>
+ID:<jsp:getProperty name="tb" property="name"/><br>
+ID:<jsp:getProperty name="tb" property="addr"/><br>
+ID:<jsp:getProperty name="tb" property="email"/><br>
+ID:<jsp:getProperty name="tb" property="tel"/><br>

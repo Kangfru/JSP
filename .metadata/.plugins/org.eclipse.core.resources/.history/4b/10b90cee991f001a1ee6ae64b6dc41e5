@@ -1,0 +1,8 @@
+package emailupload;
+
+import java.io.*;
+import javax.servlet.http.*;
+
+public class EmailUpload {
+
+}

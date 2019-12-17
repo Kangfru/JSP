@@ -1,0 +1,13 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="boardmysql.*"%>
+<%
+	request.setCharacterEncoding("UTF-8");
+%>
+<jsp:useBean id="dto" class="boardmysql.BoardDTO">
+	<jsp:param name="dto" property="*"/> 
+</jsp:useBean>
+
+<%
+dto.setIp(request.getRemoteAddr());
+%>
