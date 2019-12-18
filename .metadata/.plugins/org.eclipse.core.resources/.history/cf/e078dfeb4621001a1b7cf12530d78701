@@ -1,0 +1,33 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="boardmysql.*" %>
+<%@ include file = "/view/color.jsp" %>
+
+<%-- updateForm.jsp --%>
+
+<%
+	request.setCharacterEncoding("UTF-8");
+%>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+		<%
+			int num = Integer.parseInt(request.getParameter("num"));
+			String pageNum = request.getParameter("pageNum");
+			
+			BoardDAO dao = BoardDAO.getDAO();
+			BoardDTO dto = dao.updateGetArticle(num);
+		%>
+	<body>
+		<center><b><font size="+2">글 수정</font></b></center>
+		<form method="post" action="updatePro.jsp?pageNum=<%=pageNum%>" name="writeForm">
+			<table width="60%" cellpadding="5" align="center">
+				<tr bgcolor="<%=value_c%>">
+					<td width="70" align="center">이름</td>
+					<td width="330"><input /></td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>
