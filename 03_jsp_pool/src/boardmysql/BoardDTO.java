@@ -114,4 +114,15 @@ public class BoardDTO {
 	public void setIp(String ip) {
 		this.ip = ip;
 	}
+
+	@Override
+	public String toString() {
+		return "BoardDTO [num=" + num + ", writer=" + writer + ", email="
+				+ email + ", subject=" + subject + ", passwd=" + passwd
+				+ ", reg_date=" + reg_date + ", readcount=" + readcount
+				+ ", ref=" + ref + ", re_step=" + re_step + ", re_level="
+				+ re_level + ", content=" + content + ", ip=" + ip + "]";
+	}
+	
+	
 }

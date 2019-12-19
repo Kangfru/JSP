@@ -1,0 +1,30 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ include file="/view/color.jsp" %>    
+
+<%-- deleteForm.jsp --%>
+<%
+	int num = Integer.parseInt(request.getParameter("num"));
+	String pageNum = request.getParameter("pageNum");
+%>
+
+<html>
+	<head>
+		<link href="style.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript">
+			function deleteSave() {
+				if(document.delForm.passwd.value == ''){
+					alert("암호를 입력하세요");
+					document.delForm.passwd.focus();
+					return false;					
+				}
+			}// delete save end
+		</script>
+	</head>
+	<body>
+		<b><center><font size="+2">글 삭제</font></center></b>
+		<form name="delForm" method="post" action="deletePro.jsp?=<%=pageNum%>">
+			
+		</form>
+	</body>
+</html>

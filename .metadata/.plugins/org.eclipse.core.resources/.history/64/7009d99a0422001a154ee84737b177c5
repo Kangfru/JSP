@@ -1,0 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%-- test04_oper.jsp --%>
+<h2>연산자</h2>
+
+<h3>\${7+5}=${7+5 }</h3>
+<h3>\${7-5}=${7-5}</h3>
+<h3>\${7*5}=${7*5}</h3>
+<h3>\${7/5}=${7/5}</h3>
+<h3>\${7%5}=${7%5}</h3>

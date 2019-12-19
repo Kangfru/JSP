@@ -29,7 +29,7 @@
        <td align="center" width="125" bgcolor="<%=value_c%>">글번호</td>
        <td align="center" width="125"><%=dto.getNum() %></td>
        
-       <td align="center" width="125" bgcolor="<%=value_c%>">조횟수</td>
+       <td align="center" width="125" bgcolor="<%=value_c%>">조회수</td>
        <td align="center" width="125"><%=dto.getReadcount() %></td>
      </tr>
      
@@ -61,10 +61,10 @@
       
      <tr height="30">
        <td colspan="4" bgcolor="<%=value_c%>" align="right">
-       <input type="button" value="글수정" onClick="document.location.href='updateForm.jsp?num=<%=dto.getNum()%>&pageNum=<%=pageNum%>'">
-       <input type="button" value="글삭제" onClick="document.location.href='deleteForm.jsp?num=<%=dto.getNum()%>&pageNum=<%=pageNum%>'">
-       <input type="button" value="답글쓰기" onClick="document.location.href='writeForm.jsp?num=<%=dto.getNum()%>&pageNum=<%=pageNum%>&ref=<%=ref%>&re_step=<%=re_step%>&re_level=<%=re_level%>'">
-       <input type="button" value="리스트" onClick="document.location.href='list.jsp?pageNum=<%=pageNum%>'">
+       <input type="button" value="글수정" onClick="document.location='updateForm.jsp?num=<%=dto.getNum()%>&pageNum=<%=pageNum%>'">
+       <input type="button" value="글삭제" onClick="document.location='deleteForm.jsp?num=<%=dto.getNum()%>&pageNum=<%=pageNum%>'">
+       <input type="button" value="답글쓰기" onClick="document.location='writeForm.jsp?num=<%=dto.getNum()%>&pageNum=<%=pageNum%>&ref=<%=ref%>&re_step=<%=re_step%>&re_level=<%=re_level%>'">
+       <input type="button" value="리스트" onClick="document.location='list.jsp?pageNum=<%=pageNum%>'">
        </td>
      </tr>
       

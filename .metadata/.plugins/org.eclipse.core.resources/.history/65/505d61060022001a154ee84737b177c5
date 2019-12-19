@@ -1,0 +1,16 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%-- test03Form.jsp --%>
+
+<%
+	session.setAttribute("id", "admin");
+%>
+
+<html>
+	<body>
+		<form method="post" action="test03.jsp">
+			<table border="1">
+			</table>
+		</form>
+	</body>
+</html>

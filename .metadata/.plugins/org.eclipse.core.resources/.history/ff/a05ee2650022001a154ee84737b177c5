@@ -1,0 +1,28 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%-- test03Form.jsp --%>
+
+<%
+	session.setAttribute("id", "admin");
+%>
+
+<html>
+	<body>
+		<form method="post" action="test03.jsp">
+			<table border="1">
+				<tr>
+					<td>이름</td>
+					<td><input type="text" name="name" id="name" size="20" value="아이유"/></td>
+				</tr>
+				<tr>
+					<td>주소</td>
+					<td><input type="text" name="addr" id="addr" size="50" value="서울특별시 구로구 구로1동"/></td>
+				</tr>
+				<tr>
+					<td>전화</td>
+					<td><input type="text" name="tel" id="tel" size="14" value="서울특별시 구로구 구로1동"/></td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>

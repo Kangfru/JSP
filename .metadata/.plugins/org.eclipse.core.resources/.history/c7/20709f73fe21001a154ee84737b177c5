@@ -1,0 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+ 메서드방식 알아보기:<br>
+ 표현식: <%=request.getMethod()%><br>
+ 표현언어 : ${pageContext.request.method}<br>
+    

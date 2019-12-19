@@ -1,0 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+request.setCharacterEncoding("UTF-8");
+%>
+
+<h2>${sessionScope.id } 님 안녕하세요.</h2>
+
+이름 : ${param.name }<br/>
+주소 : ${param.addr }<br/>

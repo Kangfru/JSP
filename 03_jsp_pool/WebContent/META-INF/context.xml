@@ -14,18 +14,4 @@ testOnBorrow="true"
 factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
 closeMethod="close"/>
 
-<Resource 
-name="jdbc/oracle"  
-auth="Container" 
-type="javax.sql.DataSource"  
-driverClassName="oracle.jdbc.driver.OracleDriver" 
-url="jdbc:oracle:thin:@402-oracle:1521:orcl"   
-username="c##java01" 
-password="java01" 
-maxWait="5000" 
-maxActive="20" 
-testOnBorrow="true" 
-factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
-closeMethod="close"/>
-
 </Context>

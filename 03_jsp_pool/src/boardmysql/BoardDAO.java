@@ -165,10 +165,6 @@ public class BoardDAO {
 				  //dto.setReg_date(rs.getDate("reg_date"));
 				  dto.setReg_date(rs.getTimestamp("reg_date"));
 				  
-				  System.out.println("날짜"+rs.getDate("reg_date"));
-				  System.out.println("날짜"+rs.getString("reg_date"));
-				  System.out.println("날짜"+rs.getTimestamp("reg_date"));
-				  
 				  dto.setReadcount(rs.getInt("readcount"));//조횟수
 				  dto.setRef(rs.getInt("ref"));
 				  dto.setRe_step(rs.getInt("re_step"));
@@ -192,7 +188,6 @@ public class BoardDAO {
 				if(con != null){con.close();}
 			}catch(Exception ex2){}
 		}//finally end
-		
 		return list;
 	}//getList() end
 	//-----------------------
@@ -339,4 +334,39 @@ public class BoardDAO {
 		
 		return x;
 	}
-}///class end
+	public int deleteArticle(int num, String passwd) throws Exception{
+		
+		String dbPasswd = "";
+		int x = -100;
+		
+		try{
+			con = getCon();
+			pstmt = con.prepareStatement(" SELECT passwd FROM board WHERE num = ? ");
+			pstmt.setInt(1, num);
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				dbPasswd = rs.getString("passwd");
+				if(passwd.equals(dbPasswd)){ // 암호 일치 시
+					pstmt = con.prepareStatement(" DELETE FROM board WHERE num = ? ");
+					pstmt.setInt(1, num);
+					pstmt.executeUpdate(); // 쿼리 수행
+					x = 1;
+				}
+			}
+		} catch(Exception e) {
+			System.out.println("deleteArticle() 에외 : " + e);
+			e.printStackTrace();
+		} finally {
+			try {
+				if(rs != null){rs.close();}
+				if(pstmt != null){pstmt.close();}
+				if(con != null){con.close();}	
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}// end of finally
+		return x;
+	}
+	
+} // class end

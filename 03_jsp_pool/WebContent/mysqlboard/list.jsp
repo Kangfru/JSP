@@ -109,12 +109,15 @@ number=count-(currentPage-1)*pageSize;//보여줄 글번호
     	if(dto.getRe_level()>0){//답글이면
     		wid=5*dto.getRe_level();
     	%>
-    	<img src="../imags/level.gif" width="<%=wid%>" height="16">
-    	<img src="../imags/re.gif">
+    	<img src="../images/level.gif" width="<%=wid%>" height="16">
+    	<img src="../images/re.gif">
     	<%
     	}else{//원글이면
     	%>
-    	<img src="../imags/level.gif" width="<%=wid%>" height="16">
+    	<img src="../images/level.gif" width="<%=wid%>" height="16">
+    	 <%
+    	}
+    	%>
     	<%--글제목 출력  --%>
     	 <a href="content.jsp?num=<%=dto.getNum()%>&pageNum=<%=currentPage%>">
     	   <%=dto.getSubject() %>
@@ -123,7 +126,7 @@ number=count-(currentPage-1)*pageSize;//보여줄 글번호
     	 //조횟수 20번 이상이면 hot.gif 표시하기
     	 if(dto.getReadcount()>20){
     		 %>
-    		 <img src="../imags/hot.gif" height="10" border="0">
+    		 <img src="../images/hot.gif" height="10" border="0">
     		 <%
     	 }//if
     	 %>
@@ -141,9 +144,6 @@ number=count-(currentPage-1)*pageSize;//보여줄 글번호
 	    <td align=center><%=dto.getReadcount() %></td>
 	    <td align=center><%=dto.getIp() %></td>
     	</tr>
-    	<%
-    	}//else end--
-    	%>
     	<%
     }//for end
      %>
