@@ -18,5 +18,31 @@ forEach 태그 형식
 
 설명
 items 속성에 올 수 있는 것 : Map, [], Collection(List 등) 등등이 있다.
-배열일 경우 기본 데이터는 Wrapper 클래스<Integer,Double, Long> 등등을 사용하여 처리
+배열일 경우 기본 데이터는 Wrapper 클래스<Integer, Double, Long> 등등을 사용하여 처리
 --%>
+
+<%-- 실습1 --%>
+<h3>1~10까지 출력</h3>
+<c:forEach var="i" begin="1" end="10" step="1">
+${i }&nbsp;
+</c:forEach>
+
+<%-- 실습2 --%>
+<h3>1~10까지 짝수만 출력</h3>
+<c:forEach var="i" begin="2" end="10" step="2">
+${i }&nbsp;
+</c:forEach>
+
+<%-- 실습2 --%>
+<h3>1~10까지 합구하기</h3>
+<c:set var="sum" value="0"/>
+<c:forEach var="i" begin="1" end="10" step="1">
+	<c:set var="sum" value="${sum + i }"/>
+</c:forEach>
+1 ~ 10 까지의 합 : ${sum }
+
+
+
+
+
+

@@ -1,0 +1,15 @@
+import java.io.*;
+import java.util.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+
+//Servlet에서 JSP로 포워딩 하기 
+public class ServletToJsp extends HttpServlet {
+
+	public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException{
+		
+		res.setContentType("text/html;charset='UTF-8'");
+	} // end of doGet()
+	
+	
+} // end of ServletToJsp Class

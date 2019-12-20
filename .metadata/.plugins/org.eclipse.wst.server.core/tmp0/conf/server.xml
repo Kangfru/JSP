@@ -126,7 +126,10 @@
       <Context docBase="E:\_jsp\jsp_work\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="E:\_jsp\jsp_work\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\01_servlet" path="/01_servlet" reloadable="true" source="org.eclipse.jst.jee.server:01_servlet"/><Context docBase="E:\_jsp\jsp_work\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\02_jsp" path="/02_jsp" reloadable="true" source="org.eclipse.jst.jee.server:02_jsp"/><Context docBase="E:\_jsp\jsp_work\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\03_jsp_pool" path="/03_jsp_pool" reloadable="true" source="org.eclipse.jst.jee.server:03_jsp_pool">
 <Resource auth="Container" closeMethod="close" driverClassName="com.mysql.jdbc.Driver" factory="org.apache.tomcat.jdbc.pool.DataSourceFactory" maxActive="20" maxWait="5000" name="jdbc/mysql" password="12345" testOnBorrow="true" type="javax.sql.DataSource" url="jdbc:mysql://localhost:3306/ch20?autoReconnect=true" username="root"/>
 
-</Context><Context docBase="E:\_jsp\jsp_work\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\04_EL" path="/04_EL" reloadable="true" source="org.eclipse.jst.jee.server:04_EL"/><Context docBase="E:\_jsp\jsp_work\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\05_JSTL" path="/05_JSTL" reloadable="true" source="org.eclipse.jst.jee.server:05_JSTL"/></Host>
+</Context><Context docBase="E:\_jsp\jsp_work\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\04_EL" path="/04_EL" reloadable="true" source="org.eclipse.jst.jee.server:04_EL"/><Context docBase="E:\_jsp\jsp_work\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\05_JSTL" path="/05_JSTL" reloadable="true" source="org.eclipse.jst.jee.server:05_JSTL">
+<Resource auth="Container" closeMethod="close" driverClassName="com.mysql.jdbc.Driver" factory="org.apache.tomcat.jdbc.pool.DataSourceFactory" maxActive="20" maxWait="5000" name="jdbc/mysql" password="12345" testOnBorrow="true" type="javax.sql.DataSource" url="jdbc:mysql://localhost:3306/ch20?autoReconnect=true" username="root"/>
+
+</Context></Host>
     </Engine>
   </Service>
 </Server>
