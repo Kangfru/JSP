@@ -1,0 +1,78 @@
+2015_7월_09_mvc_board_member
+
+===========================
+회원관리 시스템, 추가
+MVC
+
+===========================
+1. DB작업 
+ch20/member 테이블 그대로 사용
+
+
+2. 새프로젝트 :15_MVC
+
+web.xml
+
+META-INF/context.xml  커넥션 풀 
+WEB-INF/web.xml 커넥션 풀
+
+------------------------------
+모델빈 작성 ( 회원관리 시스템 )
+
+기존것 사용
+member.LoginDao.java ( 비지니스 로직 )
+member.LoginDto.java  ( 모델빈 )
+member.ZipcodeDto.java ( 모델빈 )
+------------------------------
+member.action.Action작성
+
+member.action.MainAction.java
+
+     InputFormAction.java
+     InputProAction.java
+     ConfirmIdAction.java
+
+     LoginFormAction.java
+     LoginProAction.java
+     LogoutAction.java
+
+    ModifyAction.java
+
+    ModifyFormAction.java
+    ModifyProAction.java
+
+    DeleteFormAction.java
+    DeleteProAction.java
+
+-----------------------------------
+WEB-INF/CommandT.properties
+web.xml
+ControllerTemplate.java ( 컨트롤러)
+-----------------------------------
+
+WebContent/
+                  
+template/template.jsp
+
+module/ top.jsp
+           bottom.jsp
+           left.jsp
+
+==============================
+member/
+
+main.jsp
+inputForm.jsp
+inputPro.jsp
+confirmId.jsp
+
+loginForm.jsp
+loginPro.jsp
+logout.jsp
+
+modify.jsp
+modifyForm.jsp
+modifyPro.jsp
+
+deleteForm.jsp
+deletePro.jsp

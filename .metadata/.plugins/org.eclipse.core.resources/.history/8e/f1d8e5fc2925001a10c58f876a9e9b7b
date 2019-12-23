@@ -1,0 +1,124 @@
+새프로젝트 
+09_MVC
+ web.xml 넣어주세요 
+
+1. META-INT
+     context.xml  커넥션 풀 사용
+
+2. WEB-INF
+     web.xml  커넥션 풀 사용 
+
+3. DB작업 
+   db명 : ch20
+
+3. 모델부분
+src/boardmysql 복사
+BoardDAO.java
+BoardDTO.java
+==================
+
+4. Action 작성
+    src/ch19.action.CommandAction.java 인터페이스 작성
+
+CommandAction.java 인터페이스 상속받아서
+ Action클래스 작성
+    
+ src/ch19.action
+ListAction.java  리스트 ----- jsp 로직부분을 Action이 담당
+WriteFormAction.java --글쓰기폼
+WriteProAction.java ---글쓰기 처리(DAO메서드 호출 )
+
+ContentAction.java  ---글내용보기 처리 (DAO메서드 호출 )
+UpdateFormAction.java --글 수정폼
+UpdateProAction.java   --글 수정 처리(DAO메서드 호출)
+
+DeleteFormAction.java --글 삭제 폼
+DeleteProAction.java   --글 삭제 처리 ( DAO메서드 호출)
+
+=====================
+WebContent
+  WEB-INF
+    CommandPro.properties
+=========================
+#xml작업을 properties 로 한다
+#http://localhost:9988/컨텍스트이름/중간이름/list.do 
+
+/ch19/list.do=ch19.action.ListAction
+/ch19/writeForm.do=ch19.action.WriteFormAction
+/ch19/writePro.do=ch19.action.WriteProAction
+/ch19/content.do=ch19.action.ContentAction
+/ch19/updateForm.do=ch19.action.UpdateFormAction
+/ch19/updatePro.do=ch19.action.UpdateProAction
+/ch19/deleteForm.do=ch19.action.DeleteFormAction
+/ch19/deletePro.do=ch19.action.DeleteProAction
+
+#WebContent/ch19/*.jsp
+==========================
+WebContent/ch19/*.jsp
+
+list.jsp
+writeForm.jsp
+writePro.jsp
+content.jsp
+updateForm.jsp
+updatePro.jsp
+deleteForm.jsp
+deletePro.jsp
+==========================
+컨트롤러를 작성하고
+web.xml 등록
+
+src/ch19.controller.ControllerAction.java
+
+코딩
+
+
+===========================
+web.xml에 컨트롤러를 등록 
+===========================
+<servlet>
+    <servlet-name>ControllerAction</servlet-name>
+    <servlet-class>ch19.controller.ControllerAction</servlet-class>
+  
+  	<init-param>
+  	  <param-name>propertyFile</param-name>
+  	  <param-value>/WEB-INF/CommandPro.properties</param-value>
+  	</init-param>
+  </servlet>
+  
+	<servlet-mapping>
+		<servlet-name>ControllerAction</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+============================
+
+
+WebContent/ 
+   WEB-INF/lib/jstl.jar, standard.jar
+
+WebContent/ 
+       view 폴더 복사
+       ch19 만들고
+         style.css
+         script.js
+       imgs/
+         
+
+=========================
+프레임워크 끌
+
+ListAction.java
+list.jsp
+
+ListAction.java ( 
+DAO 메서드 호출 하고 결과 받고 
+request.setAttribute("이름","값");
+
+return view 리턴
+return "/ch19/list.jsp";
+==========================
+ListAction.java
+list.jsp
+
+WriteFormAction.java
+WriteProAction.java

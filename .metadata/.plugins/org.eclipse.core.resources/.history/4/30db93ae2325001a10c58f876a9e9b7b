@@ -1,0 +1,9 @@
+#uri\uc811\uc18d\uc8fc\uc18c       \ucc98\ub9ac\ub418\ub294 \uc561\uc158
+/ch19/list.do=ch19.action.ListAction
+/ch19/writeForm.do=ch19.action.WriteFormAction
+/ch19/writePro.do=ch19.action.WriteProAction
+/ch19/content.do=ch19.action.ContentAction
+/ch19/updateForm.do=ch19.action.UpdateFormAction
+/ch19/updatePro.do=ch19.action.UpdateProAction
+/ch19/deleteForm.do=ch19.action.DeleteFormAction
+/ch19/deletePro.do=ch19.action.DeleteProAction

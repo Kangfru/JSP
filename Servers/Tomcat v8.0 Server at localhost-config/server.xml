@@ -123,7 +123,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="01_servlet" path="/01_servlet" reloadable="true" source="org.eclipse.jst.jee.server:01_servlet"/><Context docBase="02_jsp" path="/02_jsp" reloadable="true" source="org.eclipse.jst.jee.server:02_jsp"/><Context docBase="03_jsp_pool" path="/03_jsp_pool" reloadable="true" source="org.eclipse.jst.jee.server:03_jsp_pool"/><Context docBase="04_EL" path="/04_EL" reloadable="true" source="org.eclipse.jst.jee.server:04_EL"/><Context docBase="05_JSTL" path="/05_JSTL" reloadable="true" source="org.eclipse.jst.jee.server:05_JSTL"/></Host>
+      <Context docBase="01_servlet" path="/01_servlet" reloadable="true" source="org.eclipse.jst.jee.server:01_servlet"/><Context docBase="02_jsp" path="/02_jsp" reloadable="true" source="org.eclipse.jst.jee.server:02_jsp"/><Context docBase="03_jsp_pool" path="/03_jsp_pool" reloadable="true" source="org.eclipse.jst.jee.server:03_jsp_pool"/><Context docBase="04_EL" path="/04_EL" reloadable="true" source="org.eclipse.jst.jee.server:04_EL"/><Context docBase="05_JSTL" path="/05_JSTL" reloadable="true" source="org.eclipse.jst.jee.server:05_JSTL"/><Context docBase="06_servlet" path="/06_servlet" reloadable="true" source="org.eclipse.jst.jee.server:06_servlet"/><Context docBase="07_MVC" path="/07_MVC" reloadable="true" source="org.eclipse.jst.jee.server:07_MVC"/></Host>
     </Engine>
   </Service>
 </Server>

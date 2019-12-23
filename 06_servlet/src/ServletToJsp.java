@@ -16,12 +16,21 @@ public class ServletToJsp extends HttpServlet {
 		String user="아이유";
 		Vector vec = new Vector();
 		vec.add("이음 스킨");
-		vec.add("청바지NO.3049");
+		vec.add("청바지 NO.3049");
 		vec.add("소주 16.9도 참이슬 후레쉬");
 		
 		req.setAttribute("user", user);
 		req.setAttribute("vec", vec);
 		
+		// Map, HashMap
+		String user2 = "한지민";
+		HashMap<String, String> map = new HashMap<>();
+		map.put("pum1", "이음 스킨");
+		map.put("pum2", "청바지 NO.3049");
+		map.put("pum3", "아침햇살 1.51");
+		
+		req.setAttribute("user2", user2);
+		req.setAttribute("map", map);
 		// servlet에서 JSP로 포워딩
 		RequestDispatcher rd = getServletContext().getRequestDispatcher("/jsp/target.jsp");
 		rd.forward(req, res);
